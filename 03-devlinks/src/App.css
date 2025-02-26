@@ -41,11 +41,10 @@
   width: 100%;
   max-width: 588px;
   margin: 0px auto 0px;
-  padding: 0 24px;
-  padding-top: 56px;
+  padding: 0px 24px;
 }
 
-#links ul {
+#links {
   list-style: none;
   display: flex;
   flex-direction: column;

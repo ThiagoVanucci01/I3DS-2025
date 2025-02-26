@@ -7,8 +7,9 @@
     width: 112px;
     height: 112px;
     object-fit: cover;
-    object-position: -34px;
+    object-position: 0px;
     border-radius: 50%;
+    margin-top: 20px;
   }
   & p {
     font-weight: 500;
