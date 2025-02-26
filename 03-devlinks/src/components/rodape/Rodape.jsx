@@ -1,11 +1,11 @@
 import styles from "./Rodape.module.css";
 
-const Rodape = () => {
+const Rodape = ({ children }) => {
   return (
     <footer>
       <p>
-        Feito com 🤍 por{" "}
-        <a href="https://github.com/ThiagoVanucci01">Thiago Vanucci</a>
+        Feito com 🤍 por
+        <a href="https://github.com/ThiagoVanucci01"> {children}</a>
       </p>
     </footer>
   );
