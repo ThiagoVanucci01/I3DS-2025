@@ -1,6 +1,6 @@
 import Perfil from "./components/perfil/perfil";
-import fotoLight from "./img/perfilLight.png";
-import fotoDark from "./img/perfilDark.png";
+import fotoLight from "./img/PerfilThiagoV2.jpeg";
+import fotoDark from "./img/PerfilThiagoV.jpeg";
 
 import "./App.css";
 import Switch from "./components/switch/Switch";
