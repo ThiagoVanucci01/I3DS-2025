@@ -35,6 +35,7 @@
 #App {
   background: var(--bg-url) no-repeat top center / cover;
   height: 100vh;
+  padding: 30px;
 }
 
 #container {

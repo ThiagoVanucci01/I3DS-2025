@@ -14,7 +14,7 @@ const App = () => {
       <div id="sobreMim">
         <p>
           Prazer! Sou o Thiago, tenho 17 anos, sou estudante de Desenvolvimento
-          de Sistemas no Senai de Jau,{" "}
+          de Sistemas no Senai de Jau,......{" "}
         </p>
       </div>
       <div id="socialLinks">
