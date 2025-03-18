@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import Footer from "./components/footer/Footer";
-import MovieCard from "./components/movieCard/MovieCard";
 import Logo from "./assets/devflix.png";
 import Lupa from "./assets/search.svg";
 
@@ -11,7 +10,7 @@ const App = () => {
 
   //Utilizando chave de API do arquivo .env
   //const apiKey = import.meta.env.VITE_OMDB_API_KEY;
-  const apiKey ="e4d577fa"
+  const apiKey = "e4d577fa";
   const apiUrl = `https://omdbapi.com/?apikey=${apiKey}`;
 
   //Alimentando com dados para não ficar nulo com useEffect
@@ -46,16 +45,6 @@ const App = () => {
         />
         <img onClick={() => searchMovies(search)} src={Lupa} alt="" />
       </div>
-
-      {movies?.length > 0 ? (
-        <div className="container">
-          {movies.map((movie, index) => (
-            <MovieCard key={index} apiUrl={apiUrl} {...movie} />
-          ))}
-        </div>
-      ) : (
-        <h2 className="empty">😢 Filme não encontrado 😢</h2>
-      )}
 
       <Footer
         devName={" ProfCastello"}
