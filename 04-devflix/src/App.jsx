@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import Footer from "./components/footer/Footer";
-import MovieCard from "./components/MovieCard/MovieCard";
+import MovieCard from "./components/movieCard/MovieCard";
 import Logo from "./assets/devflix.png";
 import Lupa from "./assets/search.svg";
 
@@ -10,15 +10,16 @@ const App = () => {
   const [movies, setMovies] = useState([]);
 
   //Utilizando chave de API do arquivo .env
-  const apiKey = import.meta.env.VITE_OMDB_API_KEY;
+  //const apiKey = import.meta.env.VITE_OMDB_API_KEY;
+  const apiKey ="e4d577fa"
   const apiUrl = `https://omdbapi.com/?apikey=${apiKey}`;
 
-  //Alimentando com dados para não ficar nulo
+  //Alimentando com dados para não ficar nulo com useEffect
   useEffect(() => {
-    searchMovies("Barbie");
+    searchMovies("Batman");
   }, []);
 
-  //criando a conexão de API e trazendo informações
+  //criando a conexão com a API e trazendo informações
   const searchMovies = async (title) => {
     const response = await fetch(`${apiUrl}&s=${title}`);
     const data = await response.json();
@@ -27,7 +28,7 @@ const App = () => {
     setMovies(data.Search);
   };
 
-  //e = evento |  ao clicar ou digitar acontece algo
+  //e = evento | ao clicar ou digitar acontece algo
   const handleKeyPress = (e) => {
     e.key === "Enter" && searchMovies(search);
   };
@@ -53,12 +54,12 @@ const App = () => {
           ))}
         </div>
       ) : (
-        <h2 className="empty">Filme não encontrado</h2>
+        <h2 className="empty">😢 Filme não encontrado 😢</h2>
       )}
 
       <Footer
-        devName={"ThiagoVanucci"}
-        devLinks={"https://github.com/ThiagoVanucci01"}
+        devName={" ProfCastello"}
+        devLink={"https://github.com/ProfCastello"}
       />
     </div>
   );
